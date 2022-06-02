@@ -159,12 +159,13 @@ section{
     align-items: center;
     flex-direction: column; */
 }
-.thead-class{
-  /* width: 100%;   */
-  /* border-bottom: 1px solid black;  */
-  /* border: 1px solid black; 
-  border-spacing: 20px; */
-}
+/* .thead-class{
+  width: 100%;  
+  border-bottom: 1px solid black; 
+  border: 1px solid black; 
+  border-spacing: 20px;
+} 
+*/
 
  table{
     width: 100%;
