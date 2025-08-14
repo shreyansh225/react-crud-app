@@ -60,14 +60,14 @@ We follow a **Git branching convention** for clarity and maintainability:
 | `major`  | Major release updates from `production`                               |
 
 **Examples**
-git branch feature/IS-001--update-UI-input-and-alert 
+- git branch feature/IS-001--update-UI-input-and-alert 
 
-patch/IS-2--fix-block-movement
-bugfix/IS-1--example-bugfix
-refactor/IS-1--refactor-test
-patch/IS-1--example-patch
-minor/IS-1--example-minor
-major/IS-1--example-major
+- patch/IS-2--fix-block-movement
+- bugfix/IS-1--example-bugfix
+- refactor/IS-1--refactor-test
+- patch/IS-1--example-patch
+- minor/IS-1--example-minor
+- major/IS-1--example-major
 
 ---
 
@@ -88,17 +88,20 @@ We use **conventional commit messages** for clarity:
 - `major` → Major production release
 
 **Examples**
-feat(IS-001): update gitIgnore
-fix(IS-990): set dna and dp dispo lag to 1
+- feat(IS-001): update gitIgnore
+- fix(IS-990): set dna and dp dispo lag to 1
 
-git commit -m "feat(IS-001): update UI input clearing with redirecting and add alert"
+- git commit -m "feat(IS-001): update UI input clearing with redirecting and add alert"
 
 
 **Get Remote Branch in Local**
 
--> git fetch origin
--> git checkout -b feature/IS-007-add-latest-UI origin/feature/IS-007-add-latest-UI
--> git pull origin feature/IS-007-add-latest-UI
+- git fetch origin
+- git checkout -b feature/IS-007-add-latest-UI origin/feature/IS-007-add-latest-UI
+- git pull origin feature/IS-007-add-latest-UI
+
+**Delete Branch from Local**
+- git branch -d feature/IS-001--update-UI-input-and-alert
 
 
 ---

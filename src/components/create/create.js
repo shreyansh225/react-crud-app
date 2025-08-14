@@ -10,7 +10,13 @@ function Create() {
     const[lastName, setLastName] = useState('');
 
     const sendDataToAPI = () => {
-        // e.PreventDefault();
+        // Validation check
+        if (!firstName.trim() || !lastName.trim()) {
+            alert("❌ Please fill out both First Name and Last Name.");
+            return;
+        }
+        
+        // Sending data to API
         axios.post(`https://627fa751b1cc1b12625886d2.mockapi.io/crud` , {
             firstName,
             lastName
