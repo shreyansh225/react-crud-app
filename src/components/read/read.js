@@ -92,7 +92,7 @@ function Read() {
       
       <div className="contentBox">
         <div className="formBox">
-          <form>
+          <form className="inputBox">
             <Link to="/create">
               <input type="button" value="Add New Data" />
             </Link>
