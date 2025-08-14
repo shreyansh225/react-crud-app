@@ -1,9 +1,10 @@
 import React, {useState, useEffect}  from 'react'
 // import {Form, FormGroup, Button, Label, Input } from 'reactstrap'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate  } from 'react-router-dom';
 
 function Create() {
+    const navigate = useNavigate();
     // let history = useHistory();
     const[firstName, setFirstName] = useState('');
     const[lastName, setLastName] = useState('');
@@ -15,6 +16,10 @@ function Create() {
             lastName
         })
         .then(() => {
+            setFirstName('');
+            setLastName('');
+            alert("Data Added Successfully");
+            navigate('/read');  // Redirect to read page
             // history.push('./read');
         }
             // res => console.log('posting data', res)
@@ -35,11 +40,19 @@ function Create() {
                     <form>
                         <div className="inputBox">
                             <span> First Name </span>
-                            <input  name="fname" onChange= {(e) => setFirstName(e.target.value)}  placeholder='Enter first name' />
+                            <input  
+                            name="fname" 
+                            value={firstName}
+                            onChange= {(e) => setFirstName(e.target.value)}  
+                            placeholder='Enter first name' />
                         </div>
                         <div className="inputBox">
                             <span> Last Name </span>
-                            <input name="lname"  onChange= {(e) => setLastName(e.target.value)}  placeholder='Enter last name'/>
+                            <input 
+                            name="lname"  
+                            value={lastName}
+                            onChange= {(e) => setLastName(e.target.value)}  
+                            placeholder='Enter last name'/>
                         </div>
                         {/* <div className="remember">
                             <label><input type="checkbox" name="" id="" /> Remember me</label>
