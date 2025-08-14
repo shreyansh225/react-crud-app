@@ -50,9 +50,9 @@ function Read() {
             </tr>
           </thead>
           <tbody>
-            {apiData.map((data) => {
+            {apiData.map((data,index) => {
               return (
-                <tr>
+                <tr key={data.id}>
                   <th scope="row">{data.id}</th>
                   <td>{data.firstName}</td>
                   <td>{data.lastName}</td>
